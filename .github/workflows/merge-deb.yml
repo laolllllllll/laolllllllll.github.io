@@ -1,0 +1,38 @@
+name: Merge DEB parts
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'repo/debs/deb.part_*'
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Merge parts and verify
+        run: |
+          cd repo/debs
+          cat deb.part_aa deb.part_ab deb.part_ac deb.part_ad > com.kiloo.subwaysurfers_1.86.0-4_iphoneos-arm.deb
+          ls -lh com.kiloo.subwaysurfers_1.86.0-4_iphoneos-arm.deb
+          echo "Expected md5: 1aca3219e70c9cb24b4cdcd2371e0f68"
+          md5sum com.kiloo.subwaysurfers_1.86.0-4_iphoneos-arm.deb
+
+      - name: Commit merged deb
+        run: |
+          cd repo/debs
+          EXPECTED="1aca3219e70c9cb24b4cdcd2371e0f68"
+          ACTUAL=$(md5sum com.kiloo.subwaysurfers_1.86.0-4_iphoneos-arm.deb | awk '{print $1}')
+          if [ "$EXPECTED" != "$ACTUAL" ]; then
+            echo "Checksum MISMATCH!"
+            exit 1
+          fi
+          echo "Checksum OK, committing..."
+          rm -f deb.part_aa deb.part_ab deb.part_ac deb.part_ad .gitkeep
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Merge deb parts into complete deb (74MB)"
+          git push
