@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'repo/debs/deb.part_*'
+permissions:
+  contents: write      - 'repo/debs/deb.part_*'
 
 jobs:
   merge:
