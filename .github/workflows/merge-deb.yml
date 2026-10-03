@@ -4,8 +4,10 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - 'repo/debs/deb.part_*'
+
 permissions:
-  contents: write      - 'repo/debs/deb.part_*'
+  contents: write
 
 jobs:
   merge:
@@ -34,6 +36,6 @@ jobs:
           rm -f deb.part_aa deb.part_ab deb.part_ac deb.part_ad .gitkeep
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "Merge deb parts into complete deb (74MB)"
+          git add com.kiloo.subwaysurfers_1.86.0-4_iphoneos-arm.deb
+          git commit -m "Merge DEB parts into complete deb (74MB)"
           git push
