@@ -1,0 +1,7 @@
+Origin: laolllllllll Cydia Repo
+Label: laolllllllll Repo
+Suite: stable
+Codename: ios
+Architectures: iphoneos-arm
+Components: main
+Description: Personal Cydia Repository hosted on GitHub Pages
