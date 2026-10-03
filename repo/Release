@@ -1,8 +1,9 @@
 Origin: Laol Game Repo
 Label: Laol Game Repo
 Suite: stable
-Version: 1.0
+Version: 1.1
 Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
 Description: Classic old iOS games, ldid pseudo-signed, no AppSync required
+
