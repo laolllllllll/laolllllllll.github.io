@@ -1,7 +1,7 @@
-Origin: laolllllllll Cydia Repo
-Label: laolllllllll Repo
+Origin: 老驴游戏源
+Label: 老驴游戏源
 Suite: stable
 Codename: ios
 Architectures: iphoneos-arm
 Components: main
-Description: Personal Cydia Repository hosted on GitHub Pages
+Description: 老驴游戏源 - 经典老iOS游戏合集，ldid伪签名免AppSync
