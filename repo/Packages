@@ -1,0 +1,18 @@
+Package: com.kiloo.subwaysurfers
+Version: 1.86.0-4
+Architecture: iphoneos-arm
+Maintainer: cor
+Depends: mobilesubstrate
+Filename: debs/com.kiloo.subwaysurfers_1.86.0-4_iphoneos-arm.deb
+Size: 77898972
+MD5sum: 1aca3219e70c9cb24b4cdcd2371e0f68
+SHA1: ce0624d9195ff2b5d2175834239c4f401296b74c
+SHA256: ea3b8da171833a8353eb17aec2282976aa2a5a188b1a50f5aa7c74ea6b8952eb
+Section: Games
+Description: Subway Surfers game repackaged as Cydia deb.
+ IPA converted to deb format, binary pseudo-signed with ldid.
+ Supports armv7 and arm64, MinimumOSVersion 7.0.
+ .
+ Installs to /Applications/subwaysurfers.app.
+ No AppSync required - ldid adhoc signature + jailbreak kernel patch.
+Name: Subway Surf
