@@ -2,7 +2,7 @@ name: Merge DEB chunks
 on:
   push:
     paths:
-      - 'repo/debs/newpart_*'
+      - 'repo/debs/chunk_*'
   workflow_dispatch:
 
 permissions:
@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Merge chunks and cleanup
+      - name: Merge 15 chunks and cleanup
         run: |
-          cat repo/debs/newpart_aa repo/debs/newpart_ab repo/debs/newpart_ac repo/debs/newpart_ad > repo/debs/com.kiloo.subwaysurfers_1.86.0-4_iphoneos-arm.deb
-          rm -f repo/debs/newpart_*
+          cat repo/debs/chunk_aa repo/debs/chunk_ab repo/debs/chunk_ac repo/debs/chunk_ad repo/debs/chunk_ae repo/debs/chunk_af repo/debs/chunk_ag repo/debs/chunk_ah repo/debs/chunk_ai repo/debs/chunk_aj repo/debs/chunk_ak repo/debs/chunk_al repo/debs/chunk_am repo/debs/chunk_an repo/debs/chunk_ao > repo/debs/com.kiloo.subwaysurfers_1.86.0-4_iphoneos-arm.deb
+          rm -f repo/debs/chunk_*
           rm -f repo/debs/deb.part_*
           ls -la repo/debs/
       - name: Commit merged deb
@@ -24,5 +24,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add repo/debs/
-          git commit -m "Merge new deb chunks, remove old parts" || echo "No changes"
+          git commit -m "Merge 15 deb chunks, remove all parts" || echo "No changes"
           git push
