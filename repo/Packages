@@ -2,14 +2,14 @@ Package: com.kiloo.subwaysurfers
 Architecture: iphoneos-arm
 Version: 1.86.0-4
 Priority: standard
-Section: 破解游戏
+Section: CrackedGames
 Maintainer: cor
 Filename: ./debs/com.kiloo.subwaysurfers_1.86.0-4_iphoneos-arm.deb
-Size: 77898972
-MD5sum: 1aca3219e70c9cb24b4cdcd2371e0f68
-SHA1: ce0624d9195ff2b5d2175834239c4f401296b74c
-SHA256: ea3b8da171833a8353eb17aec2282976aa2a5a188b1a50f5aa7c74ea6b8952eb
-SHA512: 8ee507dc07c9fc6b494d9eb57564006b81153be86ec838a9d2c18288dc34dc724214aba642d255946c5f44b83e061272a73d991f68f5def21862bca6520d6f2f
+Size: 77904476
+MD5sum: 20ad35c5e45e93ef608d5227c3b4dc16
+SHA1: fd070d6aeff929d8c3ff44131ff35346a810301a
+SHA256: 8ad14b4d186f4020b2985260e013a12939a564aded6f2da8e7b2e631b3dcf7fa
+SHA512: 2701122974488b6df7cf6ae675ca1688a5f3cf78f0946e38d3ff4d226fc9b25901cf73f761664fc0c0521c73bc909714f66305e9d2939432cc7fc09d928968a5
 Description: Subway Surfers game repackaged as Cydia deb, ldid pseudo-signed, no AppSync required.
 Name: Subway Surf
 
